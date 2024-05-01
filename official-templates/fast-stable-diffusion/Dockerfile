@@ -1,7 +1,7 @@
 # Import necessary base images
 FROM runpod/stable-diffusion:models-1.0.0 as sd-models
 
-FROM nvidia/cuda:11.8.0-devel-ubuntu22.04
+FROM rocm/pytorch 
 
 # Set working directory and environment variables
 WORKDIR /

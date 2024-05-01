@@ -1,7 +1,7 @@
 # Import necessary base images
 FROM runpod/stable-diffusion:models-1.0.0 as sd-models
 FROM runpod/stable-diffusion-models:2.1 as hf-cache
-FROM nvidia/cuda:11.8.0-base-ubuntu22.04 as runtime
+FROM rocm/pytorch as runtime
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
